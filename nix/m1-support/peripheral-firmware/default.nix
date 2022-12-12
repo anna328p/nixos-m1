@@ -21,7 +21,7 @@
 
         buildCommand = ''
           mkdir extracted
-          asahi-fwextract ${/. + config.hardware.asahi.peripheralFirmwareDirectory} extracted
+          asahi-fwextract ${config.hardware.asahi.peripheralFirmwareDirectory} extracted
 
           mkdir -p $out/lib/firmware
           cat extracted/firmware.cpio | cpio -id --quiet --no-absolute-filenames
